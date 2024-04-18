@@ -1,0 +1,11 @@
+<.header>
+  New user
+</.header>
+
+<.simple_form :let={f} for={@changeset} phx-change="validate" action={~p"/users"}>
+  <.input field={f[:name]} label="Name" placeholder="Your name" />
+  <.input field={f[:username]} label="Username" placeholder="your_username" />
+  <:actions>
+    <.button>Create User</.button>
+  </:actions>
+</.simple_form>
