@@ -1,14 +1,46 @@
 <header class="px-4 sm:px-6 lg:px-8">
-  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
-    <div class="flex items-center gap-4">
-      <a href="/">
-        <img src={~p"/images/logo.svg"} width="36" />
-      </a>
-    </div>
-    <ul class="mx-5">
-      <li><.link class="text-blue-600" href={~p"/users"}>Users</.link></li>
-    </ul>
-  </div>
+  <section>
+    <nav role="navigation">
+      <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+        <div class="flex items-center gap-4">
+          <a href="/">
+            <img src={~p"/images/logo.svg"} width="36" />
+          </a>
+        </div>
+        <ul class="mx-5 flex justify-between space-x-4">
+          <%= if @current_user do %>
+            <li><%= @current_user.username %></li>
+            <li>
+              <.link
+                href={~p"/sessions/delete"}
+                method="delete"
+                class="rounded-lg bg-gray-300 px-2 py-1 hover:bg-zinc-200/80"
+              >
+                Log out
+              </.link>
+            </li>
+          <% else %>
+            <li>
+              <.link
+                class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
+                href={~p"/users/new"}
+              >
+                Register
+              </.link>
+            </li>
+            <li>
+              <.link
+                class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
+                href={~p"/sessions/new"}
+              >
+                Log in
+              </.link>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+  </section>
 </header>
 <main class="px-4 py-20 sm:px-6 lg:px-8">
   <div>
