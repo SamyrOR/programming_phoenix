@@ -5,8 +5,8 @@ defmodule Rumbl.Multimedia.Video do
   schema "videos" do
     field :title, :string
     field :url, :string
-    field :decription, :string
     field :user_id, :id
+    field :description, :string
 
     timestamps(type: :utc_datetime)
   end

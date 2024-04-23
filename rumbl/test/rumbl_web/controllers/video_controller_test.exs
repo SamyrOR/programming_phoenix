@@ -3,9 +3,9 @@ defmodule RumblWeb.VideoControllerTest do
 
   import Rumbl.MultimediaFixtures
 
-  @create_attrs %{title: "some title", " url": "some  url", decription: "some decription"}
-  @update_attrs %{title: "some updated title", " url": "some updated  url", decription: "some updated decription"}
-  @invalid_attrs %{title: nil, " url": nil, decription: nil}
+  @create_attrs %{title: "some title", " url": "some  url", description: "some description"}
+  @update_attrs %{title: "some updated title", " url": "some updated  url", description: "some updated description"}
+  @invalid_attrs %{title: nil, " url": nil, description: nil}
 
   describe "index" do
     test "lists all videos", %{conn: conn} do

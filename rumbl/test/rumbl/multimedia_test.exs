@@ -8,7 +8,7 @@ defmodule Rumbl.MultimediaTest do
 
     import Rumbl.MultimediaFixtures
 
-    @invalid_attrs %{title: nil, " url": nil, decription: nil}
+    @invalid_attrs %{title: nil, " url": nil, description: nil}
 
     test "list_videos/0 returns all videos" do
       video = video_fixture()
@@ -21,12 +21,12 @@ defmodule Rumbl.MultimediaTest do
     end
 
     test "create_video/1 with valid data creates a video" do
-      valid_attrs = %{title: "some title", " url": "some  url", decription: "some decription"}
+      valid_attrs = %{title: "some title", " url": "some  url", description: "some description"}
 
       assert {:ok, %Video{} = video} = Multimedia.create_video(valid_attrs)
       assert video.title == "some title"
       assert video. url == "some  url"
-      assert video.decription == "some decription"
+      assert video.description == "some description"
     end
 
     test "create_video/1 with invalid data returns error changeset" do
@@ -35,12 +35,12 @@ defmodule Rumbl.MultimediaTest do
 
     test "update_video/2 with valid data updates the video" do
       video = video_fixture()
-      update_attrs = %{title: "some updated title", " url": "some updated  url", decription: "some updated decription"}
+      update_attrs = %{title: "some updated title", " url": "some updated  url", description: "some updated description"}
 
       assert {:ok, %Video{} = video} = Multimedia.update_video(video, update_attrs)
       assert video.title == "some updated title"
       assert video. url == "some updated  url"
-      assert video.decription == "some updated decription"
+      assert video.description == "some updated description"
     end
 
     test "update_video/2 with invalid data returns error changeset" do
