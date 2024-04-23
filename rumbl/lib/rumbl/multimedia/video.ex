@@ -5,8 +5,8 @@ defmodule Rumbl.Multimedia.Video do
   schema "videos" do
     field :title, :string
     field :url, :string
-    field :user_id, :id
     field :description, :string
+    belongs_to :user, Rumbl.Accounts.User
 
     timestamps(type: :utc_datetime)
   end
@@ -14,7 +14,7 @@ defmodule Rumbl.Multimedia.Video do
   @doc false
   def changeset(video, attrs) do
     video
-    |> cast(attrs, [:url, :title, :decription])
-    |> validate_required([:url, :title, :decription])
+    |> cast(attrs, [:url, :title, :description])
+    |> validate_required([:url, :title, :description])
   end
 end
