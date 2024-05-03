@@ -10,7 +10,7 @@
 <.simple_form :let={f} for={@changeset} phx-change="validate" action={~p"/users"}>
   <.input field={f[:name]} label="Name" placeholder="Your name" />
   <.input field={f[:username]} label="Username" placeholder="your_username" />
-  <.input field={f[:password]} label="Password" placeholder="Your password" />
+  <.input field={f[:password]} label="Password" placeholder="Your password" type="password" />
   <:actions>
     <.button>Create User</.button>
   </:actions>
