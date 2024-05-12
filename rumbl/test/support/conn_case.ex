@@ -28,6 +28,7 @@ defmodule RumblWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import RumblWeb.ConnCase
+      import Rumbl.TestHelpers
     end
   end
 
