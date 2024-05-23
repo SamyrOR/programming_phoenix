@@ -13,7 +13,12 @@
     <.link class="p-2" navigate={~p"/manage/videos/#{video}/edit"}>Edit</.link>
   </:col>
   <:col :let={video}>
-    <.link class="p-2" href={~p"/manage/videos/#{video}"} method="delete" data-confirm="Are you sure?">
+    <.link
+      class="p-2"
+      href={~p"/manage/videos/#{video}"}
+      method="delete"
+      data-confirm="Are you sure?"
+    >
       Delete
     </.link>
   </:col>
