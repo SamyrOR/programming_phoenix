@@ -1,0 +1,17 @@
+<div class="flex flex-row">
+  <div class="flex-initial w-3/5 pr-2">
+    <h1 class="text-3xl mb-4"><%= @video.title %></h1>
+    <div id="video" data-id={@video.id} data-player_id={player_id(@video)}></div>
+  </div>
+
+  <div class="flex flex-col annotations pl-2">
+    <h3 class="text-xl">Annotations</h3>
+
+    <div id="msg-container"></div>
+    <div class="flex flex-col">
+      <textarea class="w-96 mb-3" id="msg-input" rows="3" placeholder="Comments...">
+      </textarea>
+      <.button>Post</.button>
+    </div>
+  </div>
+</div>
