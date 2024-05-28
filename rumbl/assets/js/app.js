@@ -1,7 +1,8 @@
 // If you want to use Phoenix channels, run `mix help phx.gen.channel`
 // to get started and then uncomment the line below.
 // import "./user_socket.js"
-import Player from "./player.js";
+import socket from "./socket.js";
+import Video from "./video.js";
 // You can include dependencies in two ways.
 //
 // The simplest option is to put them in assets/vendor and
@@ -43,9 +44,4 @@ liveSocket.connect();
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket;
 
-let video = document.querySelector("#video");
-if (video) {
-  Player.init(video.id, video.dataset.player_id, () => {
-    console.log("player ready");
-  });
-}
+Video.init(socket, document.getElementById("video"));
