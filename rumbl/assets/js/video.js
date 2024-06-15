@@ -1,5 +1,5 @@
 import Player from "./player.js";
-
+import { Presence } from "phoenix";
 let Video = {
   init(socket, element) {
     if (!element) {
@@ -17,10 +17,22 @@ let Video = {
     let msgContainer = document.getElementById("msg-container");
     let msgInput = document.getElementById("msg-input");
     let postButton = document.getElementById("msg-submit");
+    let userList = document.getElementById("user-list");
     let lastSeenId = 0;
     let vidChannel = socket.channel("videos:" + videoId, () => {
       return { last_seen_id: lastSeenId };
     });
+    let presence = new Presence(vidChannel);
+
+    presence.onSync(() => {
+      userList.innerHTML = presence
+        .list((id, { user: user, metas: [first, ...rest] }) => {
+          let count = rest.length + 1;
+          return `<li>${user.username}: (${count})</li>`;
+        })
+        .join("");
+    });
+
     postButton.addEventListener("click", (e) => {
       let payload = { body: msgInput.value, at: Player.getCurrentTime() };
       vidChannel
@@ -28,6 +40,7 @@ let Video = {
         .receive("error", (e) => console.log(e));
       msgInput.value = "";
     });
+
     msgContainer.addEventListener("click", (e) => {
       e.preventDefault();
       let seconds =
@@ -43,6 +56,7 @@ let Video = {
       lastSeenId = resp.id;
       this.renderAnnotation(msgContainer, resp);
     });
+
     vidChannel
       .join()
       .receive("ok", ({ annotations }) => {
