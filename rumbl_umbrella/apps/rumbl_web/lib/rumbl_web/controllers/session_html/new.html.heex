@@ -1,0 +1,8 @@
+<.header>Login</.header>
+<.simple_form :let={f} for={} as={:session} phx-validate="validate" action={~p"/sessions"}>
+  <.input field={f[:username]} placeholder="Username" />
+  <.input field={f[:password]} placeholder="Password" type="password" />
+  <:actions>
+    <.button>Login</.button>
+  </:actions>
+</.simple_form>
