@@ -1,3 +1,7 @@
+defmodule InfoSys do
+  @moduledoc """
+  Documentation for `InfoSys`.
+  """
 
   @backends [InfoSys.Wolfram]
   defmodule Result do
@@ -17,3 +21,4 @@
       shutdown: :brutal_kill
     )
   end
+end

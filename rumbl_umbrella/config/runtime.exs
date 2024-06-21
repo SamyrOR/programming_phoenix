@@ -6,6 +6,14 @@ import Config
 # and secrets from environment variables or elsewhere. Do not define
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
+wolfram_app_id =
+  System.get_env("WOLFRAM_APP_ID") ||
+    raise """
+    environment variable WOLFRAM_APP_ID is missing.
+    """
+
+config :info_sys, :wolfram, app_id: wolfram_app_id
+
 if config_env() == :prod do
   database_url =
     System.get_env("DATABASE_URL") ||
@@ -44,6 +52,14 @@ if config_env() == :prod do
       port: String.to_integer(System.get_env("PORT") || "4000")
     ],
     secret_key_base: secret_key_base
+
+  wolfram_app_id =
+    System.get_env("WOLFRAM_APP_ID") ||
+      raise """
+      environment variable WOLFRAM_APP_ID is missing.
+      """
+
+  config :info_sys, InfoSys.Wolfram, app_id: wolfram_app_id
 
   # ## Using releases
   #
