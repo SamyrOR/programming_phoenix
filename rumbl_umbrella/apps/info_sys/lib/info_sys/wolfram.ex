@@ -5,10 +5,10 @@ defmodule InfoSys.Wolfram do
   @behaviour InfoSys.Backend
   @base "http://api.wolframalpha.com/v2/query"
 
-  @imp true
+  @impl true
   def name, do: "wolfram"
 
-  @imp true
+  @impl true
   def compute(query_str, _opts) do
     query_str
     |> fetch_xml()
