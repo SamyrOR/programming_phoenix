@@ -1,6 +1,7 @@
 defmodule RumblWeb.VideoChannel do
   use RumblWeb, :channel
   alias Rumbl.{Accounts, Multimedia}
+  intercept ["new_annotation"]
 
   def join("videos:" <> video_id, params, socket) do
     send(self(), :after_join)
@@ -37,6 +38,12 @@ defmodule RumblWeb.VideoChannel do
       {:error, changeset} ->
         {:reply, {:error, %{errors: changeset}}, socket}
     end
+  end
+
+  def handle_out("new_annotation", msg, socket) do
+    %{video: video, user_id: user_id} = socket.assigns
+    push(socket, "new_annotation", Map.merge(msg, %{is_editable: video.user_id == user_id}))
+    {:noreply, socket}
   end
 
   defp broadcast_annotation(socket, user, annotation) do
