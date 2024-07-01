@@ -1,4 +1,4 @@
-FROM elixir:1.17.1-alpine
+FROM --platform=linux/arm64 elixir:1.17.1-alpine
 
 COPY . .
 
