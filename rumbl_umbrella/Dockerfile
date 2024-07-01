@@ -1,4 +1,5 @@
 FROM --platform=linux/arm64 elixir:1.17.1-alpine
+EXPOSE 4001
 
 COPY . .
 
