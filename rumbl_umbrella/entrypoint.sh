@@ -1,3 +1,4 @@
+#!/bin/ash
 # Compile assets
 MIX_ENV=prod mix assets.deploy
 

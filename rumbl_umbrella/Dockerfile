@@ -10,4 +10,4 @@ RUN mix deps.get --only prod
 RUN MIX_ENV=prod mix compile
 
 RUN chmod +x entrypoint.sh
-CMD ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
