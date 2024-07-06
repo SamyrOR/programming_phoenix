@@ -57,7 +57,8 @@ defmodule RumblWeb.MixProject do
       {:rumbl, in_umbrella: true},
       {:jason, "~> 1.2"},
       {:bandit, "~> 1.2"},
-      {:info_sys, in_umbrella: true}
+      {:info_sys, in_umbrella: true},
+      {:floki, "~> 0.36.2"}
     ]
   end
 
