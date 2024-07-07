@@ -9,7 +9,7 @@ defmodule InfoSys.MixProject do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.16",
+      elixir: "~> 1.17.1",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
