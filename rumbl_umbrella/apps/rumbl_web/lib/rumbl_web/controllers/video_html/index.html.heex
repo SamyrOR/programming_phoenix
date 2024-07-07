@@ -1,8 +1,10 @@
 <.header>
-  Listing Videos
+  <%= gettext("Listing Videos") %>
   <:actions>
     <.link href={~p"/manage/videos/new"}>
-      <.button>New Video</.button>
+      <.button>
+        <%= gettext("New Video") %>
+      </.button>
     </.link>
   </:actions>
 </.header>
@@ -17,12 +19,12 @@
       class="p-2"
       href={~p"/manage/videos/#{video}"}
       method="delete"
-      data-confirm="Are you sure?"
+      data-confirm={gettext("Are you sure?")}
     >
-      Delete
+      <%= gettext("Delete") %>
     </.link>
   </:col>
   <:col :let={video}>
-    <.link class="p-2" navigate={~p"/watch/#{video}"}>Watch</.link>
+    <.link class="p-2" navigate={~p"/watch/#{video}"}><%= gettext("Watch") %></.link>
   </:col>
 </.table>

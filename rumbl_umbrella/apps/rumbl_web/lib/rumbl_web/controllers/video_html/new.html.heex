@@ -1,8 +1,8 @@
 <.header>
-  New Video
-  <:subtitle>Use this form to manage video records in your database.</:subtitle>
+  <%= gettext("New Video") %>
+  <:subtitle><% gettext("Use this form to manage video records in your database.") %></:subtitle>
 </.header>
 
 <.video_form changeset={@changeset} action={~p"/manage/videos"} categories={@categories} />
 
-<.back navigate={~p"/manage/videos"}>Back to videos</.back>
+<.back navigate={~p"/manage/videos"}><%= gettext("Back to videos") %></.back>

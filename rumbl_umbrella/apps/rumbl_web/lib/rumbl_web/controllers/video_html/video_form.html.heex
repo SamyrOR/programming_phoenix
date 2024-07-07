@@ -1,18 +1,18 @@
 <.simple_form :let={f} for={@changeset} action={@action}>
   <.error :if={@changeset.action}>
-    Oops, something went wrong! Please check the errors below.
+    <%= gettext("Oops, something went wrong! Please check the errors below.") %>
   </.error>
   <.input field={f[:url]} type="text" label="Url" />
-  <.input field={f[:title]} type="text" label="Title" />
-  <.input field={f[:description]} type="text" label="Description" />
+  <.input field={f[:title]} type="text" label={gettext("Title")} />
+  <.input field={f[:description]} type="text" label={gettext("Description")} />
   <.input
     field={f[:category_id]}
     name="category"
     type="select"
-    label="Category"
+    label={gettext("Category")}
     options={category_select_options(@categories)}
   />
   <:actions>
-    <.button>Save Video</.button>
+    <.button><%= gettext("Save Video") %></.button>
   </:actions>
 </.simple_form>

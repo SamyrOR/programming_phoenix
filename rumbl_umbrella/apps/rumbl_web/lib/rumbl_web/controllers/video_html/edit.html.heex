@@ -1,6 +1,6 @@
 <.header>
-  Edit Video <%= @video.id %>
-  <:subtitle>Use this form to manage video records in your database.</:subtitle>
+  <%= gettext("Edit video", video_id: @video.id) %>
+  <:subtitle><%= gettext("Use this form to manage video records in your database.") %></:subtitle>
 </.header>
 
 <.video_form
@@ -9,4 +9,4 @@
   categories={@categories}
 />
 
-<.back navigate={~p"/manage/videos"}>Back to videos</.back>
+<.back navigate={~p"/manage/videos"}><%= gettext("Back to videos") %></.back>

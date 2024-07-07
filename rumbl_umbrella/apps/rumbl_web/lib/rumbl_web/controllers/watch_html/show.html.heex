@@ -5,19 +5,19 @@
   </div>
 
   <div class="flex flex-col annotations pl-2">
-    <h3 class="text-xl">Annotations</h3>
+    <h3 class="text-xl"><%= gettext("Annotations") %></h3>
 
     <div id="msg-container"></div>
     <div class="flex flex-col">
-      <textarea class="w-96 mb-3" id="msg-input" rows="3" placeholder="Comments..."></textarea>
-      <.button id="msg-submit">Post</.button>
+      <textarea class="w-96 mb-3" id="msg-input" rows="3" placeholder={gettext("Comments...")}></textarea>
+      <.button id="msg-submit"><%= gettext("Post") %></.button>
     </div>
   </div>
 </div>
 <hr />
 <div class="row">
   <div class="column">
-    <h3>Users</h3>
+    <h3><%= gettext("Users") %></h3>
     <ul id="user-list"></ul>
   </div>
 </div>

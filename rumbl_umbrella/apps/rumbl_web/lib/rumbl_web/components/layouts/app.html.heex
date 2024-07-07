@@ -15,7 +15,7 @@
                 class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
                 href={~p"/manage/videos"}
               >
-                My videos
+                <%= gettext("My videos") %>
               </.link>
             </li>
             <li>
@@ -24,7 +24,7 @@
                 method="delete"
                 class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
               >
-                Log out
+                <%= gettext("Log out") %>
               </.link>
             </li>
           <% else %>
@@ -33,7 +33,7 @@
                 class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
                 href={~p"/users/new"}
               >
-                Register
+                <%= gettext("Register") %>
               </.link>
             </li>
             <li>
@@ -41,7 +41,7 @@
                 class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
                 href={~p"/sessions/new"}
               >
-                Log in
+                <%= gettext("Login") %>
               </.link>
             </li>
           <% end %>

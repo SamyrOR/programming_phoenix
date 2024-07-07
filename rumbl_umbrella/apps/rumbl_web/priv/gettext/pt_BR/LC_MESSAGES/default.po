@@ -1,0 +1,218 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: lib/rumbl_web/components/core_components.ex:482
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr "Ações"
+
+#: lib/rumbl_web/controllers/watch_html/show.html.heex:8
+#, elixir-autogen, elixir-format
+msgid "Annotations"
+msgstr "Anotações"
+
+#: lib/rumbl_web/controllers/video_html/index.html.heex:22
+#, elixir-autogen, elixir-format
+msgid "Are you sure?"
+msgstr "Você tem certeza?"
+
+#: lib/rumbl_web/controllers/video_html/edit.html.heex:12
+#: lib/rumbl_web/controllers/video_html/new.html.heex:8
+#: lib/rumbl_web/controllers/video_html/show.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "Back to videos"
+msgstr "Voltar para os videos"
+
+#: lib/rumbl_web/controllers/video_html/video_form.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "Category"
+msgstr "Categoria"
+
+#: lib/rumbl_web/controllers/watch_html/show.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "Comments..."
+msgstr "Comentário..."
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Create User"
+msgstr "Criar usuário"
+
+#: lib/rumbl_web/controllers/video_html/index.html.heex:24
+#, elixir-autogen, elixir-format
+msgid "Delete"
+msgstr "Deletar"
+
+#: lib/rumbl_web/controllers/video_html/video_form.html.heex:7
+#, elixir-autogen, elixir-format
+msgid "Description"
+msgstr "Descrição"
+
+#: lib/rumbl_web/controllers/video_html/edit.html.heex:2
+#: lib/rumbl_web/controllers/video_html/show.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Edit video"
+msgstr "Editar video"
+
+#: lib/rumbl_web/controllers/error_html/500.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Internal server error"
+msgstr "Erro interno no servidor"
+
+#: lib/rumbl_web/controllers/user_html/index.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "Listing Users"
+msgstr "Listando usuários"
+
+#: lib/rumbl_web/controllers/video_html/index.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Listing Videos"
+msgstr "Listando videos"
+
+#: lib/rumbl_web/components/layouts/app.html.heex:44
+#: lib/rumbl_web/controllers/session_html/new.html.heex:1
+#: lib/rumbl_web/controllers/session_html/new.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Login"
+msgstr "Logar"
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Name"
+msgstr "Nome"
+
+#: lib/rumbl_web/controllers/video_html/index.html.heex:6
+#: lib/rumbl_web/controllers/video_html/new.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "New Video"
+msgstr "Novo video"
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "New user"
+msgstr "Novo usuário"
+
+#: lib/rumbl_web/controllers/error_html/404.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "Not found"
+msgstr "Não encontrado"
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:7
+#: lib/rumbl_web/controllers/video_html/video_form.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr "Oops, alguma coisa deu errado! Por favor, verifique os erros abaixo"
+
+#: lib/rumbl_web/controllers/session_html/new.html.heex:4
+#: lib/rumbl_web/controllers/user_html/new.html.heex:15
+#, elixir-autogen, elixir-format
+msgid "Password"
+msgstr "Senha"
+
+#: lib/rumbl_web/controllers/watch_html/show.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "Post"
+msgstr "Postar"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Rumbl out loud."
+msgstr "Rumbl no ar"
+
+#: lib/rumbl_web/controllers/video_html/video_form.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "Save Video"
+msgstr "Salvar video"
+
+#: lib/rumbl_web/controllers/user_html/show.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "Showing User"
+msgstr "Exibindo usuário"
+
+#: lib/rumbl_web/controllers/video_html/show.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "This is a video record from your database."
+msgstr "Este é um video do seu banco de dados"
+
+#: lib/rumbl_web/controllers/video_html/video_form.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Title"
+msgstr "Titulo"
+
+#: lib/rumbl_web/controllers/video_html/edit.html.heex:3
+#: lib/rumbl_web/controllers/video_html/new.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Use this form to manage video records in your database."
+msgstr "Utilize este formulário para manipular os videos no seu banco de dados"
+
+#: lib/rumbl_web/controllers/session_html/new.html.heex:3
+#: lib/rumbl_web/controllers/user_html/new.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: lib/rumbl_web/controllers/watch_html/show.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr "Usuários"
+
+#: lib/rumbl_web/controllers/user_html/index.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "View"
+msgstr "Ver"
+
+#: lib/rumbl_web/controllers/video_html/index.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "Watch"
+msgstr "Assitir"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Welcome to Rumbl.io!"
+msgstr "Bem vindo ao Rumbl.io!"
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Your name"
+msgstr "Seu nome"
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "Your password"
+msgstr "Sua senha"
+
+#: lib/rumbl_web/components/core_components.ex:76
+#: lib/rumbl_web/components/core_components.ex:130
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr "fechar"
+
+#: lib/rumbl_web/controllers/user_html/new.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "your_username"
+msgstr "seu_nome_de_usuário"
+
+#: lib/rumbl_web/components/layouts/app.html.heex:27
+#, elixir-autogen, elixir-format
+msgid "Log out"
+msgstr "Deslogar"
+
+#: lib/rumbl_web/components/layouts/app.html.heex:18
+#, elixir-autogen, elixir-format
+msgid "My videos"
+msgstr "Meus videos"
+
+#: lib/rumbl_web/components/layouts/app.html.heex:36
+#, elixir-autogen, elixir-format
+msgid "Register"
+msgstr "Registrar-se"

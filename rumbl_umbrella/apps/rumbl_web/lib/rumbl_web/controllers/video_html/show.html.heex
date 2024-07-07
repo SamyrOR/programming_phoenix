@@ -1,9 +1,9 @@
 <.header>
   Video <%= @video.id %>
-  <:subtitle>This is a video record from your database.</:subtitle>
+  <:subtitle><%= gettext("This is a video record from your database.") %></:subtitle>
   <:actions>
     <.link href={~p"/manage/videos/#{@video}/edit"}>
-      <.button>Edit video</.button>
+      <.button><%= gettext("Edit video") %></.button>
     </.link>
   </:actions>
 </.header>
@@ -14,4 +14,4 @@
   <:item title="Description"><%= @video.description %></:item>
 </.list>
 
-<.back navigate={~p"/manage/videos"}>Back to videos</.back>
+<.back navigate={~p"/manage/videos"}><%= gettext("Back to videos") %></.back>
