@@ -671,4 +671,26 @@ defmodule RumblWeb.CoreComponents do
   def translate_errors(errors, field) when is_list(errors) do
     for {^field, {msg, opts}} <- errors, do: translate_error({msg, opts})
   end
+
+  slot :locale, required: true do
+    attr :id, :string, required: true
+    attr :language_title, :string, required: true
+  end
+
+  attr :conn, :any, required: true
+
+  def locales_dropdown(assigns) do
+    "locale=" <> locale = assigns.conn.query_string
+
+    ~H"""
+    <div class="locales-dropdown">
+      <p><%= locale %></p>
+    </div>
+    <ul class="locales-dropdown__menu">
+      <li :for={locale <- @locale}>
+        <a href={"#{@conn.request_path}?locale=#{locale.id}"}><%= locale.id %></a>
+      </li>
+    </ul>
+    """
+  end
 end

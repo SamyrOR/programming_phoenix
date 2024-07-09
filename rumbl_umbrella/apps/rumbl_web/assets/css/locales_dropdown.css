@@ -1,0 +1,10 @@
+.locales-dropdown {
+}
+
+.locales-dropdown__menu {
+  display: none;
+}
+
+.locales-dropdown__menu.show {
+  display: block;
+}

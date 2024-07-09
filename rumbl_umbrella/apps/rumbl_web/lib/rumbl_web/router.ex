@@ -9,6 +9,7 @@ defmodule RumblWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug RumblWeb.Auth
+    plug RumblWeb.SetLocale
   end
 
   pipeline :api do

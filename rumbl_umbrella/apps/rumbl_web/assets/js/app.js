@@ -45,3 +45,21 @@ liveSocket.connect();
 window.liveSocket = liveSocket;
 
 Video.init(socket, document.getElementById("video"));
+
+let localesDropdown = document.querySelector(".locales-dropdown");
+let localesDropdownMenu = document.querySelector(".locales-dropdown__menu");
+let localesDropdownMenuItems = document.querySelectorAll(
+  ".locales-dropdown__menu > li",
+);
+
+localesDropdown.addEventListener("click", (_) => {
+  localesDropdownMenu.classList.toggle("show");
+  localesDropdown.textContent = "";
+});
+
+for (let item of Array.from(localesDropdownMenuItems)) {
+  item.addEventListener("click", (_) => {
+    localesDropdown.textContent = item.textContent;
+    localesDropdownMenu.classList.remove("show");
+  });
+}

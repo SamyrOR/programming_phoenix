@@ -2,4 +2,5 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "./video.css";
+@import "./locales_dropdown.css";
 /* This file is for your main application CSS */
