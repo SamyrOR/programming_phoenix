@@ -25,5 +25,3 @@ erl_crash.dump
 # Environment variables
 /.env
 
-# JS build content
-**/priv/static

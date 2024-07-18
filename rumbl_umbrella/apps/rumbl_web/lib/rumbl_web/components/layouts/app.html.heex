@@ -46,20 +46,10 @@
             </li>
             <li>
               <.locales_dropdown conn={@conn}>
-                <:locale id="en" language_title="English"></:locale>
-                <:locale id="pt_BR" language_title="Portugues"></:locale>
+                <:locale id="en" flag_path={~p"/images/us.svg"}></:locale>
+                <:locale id="pt_BR" flag_path={~p"/images/br.svg"}></:locale>
               </.locales_dropdown>
             </li>
-            <!--            <li>
-              <.new_locale
-                locale="pt_BR"
-                language_title="Portugues"
-                conn={@conn}
-                class="text-purple-600 py-0.5 border-y border-y-purple-600 hover:border-y-0"
-              >
-              </.new_locale>
-            </li>
--->
           <% end %>
         </ul>
       </div>

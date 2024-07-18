@@ -674,21 +674,39 @@ defmodule RumblWeb.CoreComponents do
 
   slot :locale, required: true do
     attr :id, :string, required: true
-    attr :language_title, :string, required: true
+    attr :flag_path, :string, required: true
   end
 
   attr :conn, :any, required: true
 
   def locales_dropdown(assigns) do
-    "locale=" <> locale = assigns.conn.query_string
+    params = assigns.conn.query_string
+
+    locale =
+      if(String.length(params) > 0) do
+        locale_regex = ~r/locale=([a-zA-Z_]+)/
+        [_, locale] = Regex.run(locale_regex, params)
+        locale
+      else
+        "en"
+      end
+
+    assigns = assign(assigns, :selected_locale, locale)
 
     ~H"""
     <div class="locales-dropdown">
-      <p><%= locale %></p>
+      <p>
+        <img
+          width="24px"
+          src={Enum.find(@locale, fn locale -> locale.id == @selected_locale end).flag_path}
+        />
+      </p>
     </div>
     <ul class="locales-dropdown__menu">
-      <li :for={locale <- @locale}>
-        <a href={"#{@conn.request_path}?locale=#{locale.id}"}><%= locale.id %></a>
+      <li :for={locale <- @locale} class="mb-1">
+        <a href={"#{@conn.request_path}?locale=#{locale.id}"}>
+          <img width="24px" src={locale.flag_path} />
+        </a>
       </li>
     </ul>
     """
