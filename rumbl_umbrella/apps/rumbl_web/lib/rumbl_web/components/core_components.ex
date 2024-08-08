@@ -680,26 +680,26 @@ defmodule RumblWeb.CoreComponents do
   attr :conn, :any, required: true
 
   def locales_dropdown(assigns) do
-    params = assigns.conn.query_string
+    localeCookie = assigns.conn.cookies["locale"]
 
-    locale =
-      if(String.length(params) > 0) do
-        locale_regex = ~r/locale=([a-zA-Z_]+)/
-        [_, locale] = Regex.run(locale_regex, params)
-        locale
+    locale_id =
+      if(localeCookie) do
+        localeCookie
       else
         "en"
       end
 
-    assigns = assign(assigns, :selected_locale, locale)
+    assigns =
+      assign(
+        assigns,
+        :selected_flag,
+        Enum.find(assigns.locale, fn locale -> locale.id == locale_id end).flag_path
+      )
 
     ~H"""
     <div class="locales-dropdown">
       <p>
-        <img
-          width="24px"
-          src={Enum.find(@locale, fn locale -> locale.id == @selected_locale end).flag_path}
-        />
+        <img width="24px" src={@selected_flag} />
       </p>
     </div>
     <ul class="locales-dropdown__menu">

@@ -44,13 +44,13 @@
                 <%= gettext("Login") %>
               </.link>
             </li>
-            <li>
-              <.locales_dropdown conn={@conn}>
-                <:locale id="en" flag_path={~p"/images/us.svg"}></:locale>
-                <:locale id="pt_BR" flag_path={~p"/images/br.svg"}></:locale>
-              </.locales_dropdown>
-            </li>
           <% end %>
+          <li>
+            <.locales_dropdown conn={@conn}>
+              <:locale id="en" flag_path={~p"/images/us.svg"}></:locale>
+              <:locale id="pt_BR" flag_path={~p"/images/br.svg"}></:locale>
+            </.locales_dropdown>
+          </li>
         </ul>
       </div>
     </nav>
