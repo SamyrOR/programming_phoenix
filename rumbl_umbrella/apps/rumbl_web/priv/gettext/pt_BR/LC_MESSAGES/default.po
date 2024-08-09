@@ -126,8 +126,50 @@ msgstr "Postar"
 
 #: lib/rumbl_web/controllers/page_html/home.html.heex:3
 #, elixir-autogen, elixir-format
-msgid "Rumbl out loud."
-msgstr "Rumbl no ar"
+msgid "This is a study case application, based on the book Programming Phoenix, where it gives a lot of experience in Elixir and Phoenix ecosystem, bringing knowledge about:"
+msgstr "Esta é uma aplicação de estudos, baseada no livro Programming Phoenix, na qual ensina bastante sobre o ecosistema Elixir e Phoenix, dentre eles:"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Controllers and Views"
+msgstr "Controllers and Views"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Ecto and Changesets"
+msgstr "Ecto and Changesets"
+
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Authentication"
+msgstr "Autenticação"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Channels"
+msgstr "Channels"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Umbrellas"
+msgstr "Umbrellas"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "OTP"
+msgstr "OTP"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Tests"
+msgstr "Testes"
+
+#: lib/rumbl_web/controllers/page_html/home.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "All build in the new version of Elixir v1.7.1 and Phoenix v1.7.12"
+msgstr "Tudo construido com as novas versões do Elixir v1.7.1 e Phoenix v1.7.12"
+
 
 #: lib/rumbl_web/controllers/video_html/video_form.html.heex:16
 #, elixir-autogen, elixir-format

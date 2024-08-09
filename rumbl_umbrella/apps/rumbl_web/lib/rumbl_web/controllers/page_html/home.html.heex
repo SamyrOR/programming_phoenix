@@ -1,4 +1,20 @@
-<section class="h-52 bg-gray-300 w-full flex flex-col justify-center items-center">
+<section class="p-5 bg-gray-300 w-full flex flex-col justify-center items-center">
   <h1 class="font-semibold text-2xl mb-3"><%= gettext("Welcome to Rumbl.io!") %></h1>
-  <p><%= gettext("Rumbl out loud.") %></p>
+  <div>
+    <p>
+      <%= gettext(
+        "This is a study case application, based on the book Programming Phoenix, where it gives a lot of experience in Elixir and Phoenix ecosystem, bringing knowledge about:"
+      ) %>
+    </p>
+    <ul style="list-style: disc" class="pl-8">
+      <li><%= gettext("Controllers and Views") %></li>
+      <li><%= gettext("Ecto and Changesets") %></li>
+      <li><%= gettext("Authentication") %></li>
+      <li><%= gettext("Channels") %></li>
+      <li><%= gettext("Umbrellas") %></li>
+      <li><%= gettext("OTP") %></li>
+      <li><%= gettext("Tests") %></li>
+    </ul>
+    <p><%= gettext("All build in the new version of Elixir v1.7.1 and Phoenix v1.7.12") %></p>
+  </div>
 </section>
